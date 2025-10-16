@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { authAPI } from '@/lib/api'
 
 const AuthContext = createContext({})
 
@@ -13,32 +14,49 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     // Check if user is logged in on mount
     const authUser = localStorage.getItem('authUser')
-    if (authUser) {
+    const authToken = localStorage.getItem('authToken')
+    if (authUser && authToken) {
       setUser(JSON.parse(authUser))
     }
     setLoading(false)
   }, [])
 
-  const login = (email, password) => {
-    // Dummy authentication
-    if (email === 'anand' && password === '123456') {
-      const userData = {
-        email: email,
-        name: 'Anand',
-        role: 'Admin',
-        loginTime: new Date().toISOString()
+  const login = async (email, password) => {
+    try {
+      // Call backend API for authentication
+      const response = await authAPI.login(email, password)
+      
+      if (response.success) {
+        const { token, user: userData } = response.data
+        
+        // Store token and user data in localStorage
+        localStorage.setItem('authToken', token)
+        localStorage.setItem('authUser', JSON.stringify(userData))
+        
+        setUser(userData)
+        return { success: true }
+      } else {
+        return { success: false, error: response.message || 'Login failed' }
       }
-      localStorage.setItem('authUser', JSON.stringify(userData))
-      setUser(userData)
-      return { success: true }
+    } catch (error) {
+      console.error('Login error:', error)
+      return { success: false, error: error.message || 'Network error. Please try again.' }
     }
-    return { success: false, error: 'Invalid credentials' }
   }
 
-  const logout = () => {
-    localStorage.removeItem('authUser')
-    setUser(null)
-    router.push('/auth/login')
+  const logout = async () => {
+    try {
+      // Call backend logout endpoint
+      await authAPI.logout()
+    } catch (error) {
+      console.error('Logout error:', error)
+    } finally {
+      // Clear local storage regardless of API call result
+      localStorage.removeItem('authUser')
+      localStorage.removeItem('authToken')
+      setUser(null)
+      router.push('/auth/login')
+    }
   }
 
   return (

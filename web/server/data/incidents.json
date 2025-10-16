@@ -5,7 +5,10 @@
     "type": "Road Accident",
     "severity": "High",
     "location": "MG Road, Kochi",
-    "coordinates": { "lat": 9.9312, "lng": 76.2673 },
+    "coordinates": {
+      "lat": 9.9312,
+      "lng": 76.2673
+    },
     "ambulanceAssigned": "KL-07-AZ-4123",
     "patientName": "Anonymous",
     "reportedBy": "Police Control Room",
@@ -19,7 +22,10 @@
     "type": "Cardiac Emergency",
     "severity": "Critical",
     "location": "Marine Drive, Ernakulam",
-    "coordinates": { "lat": 9.9647, "lng": 76.2736 },
+    "coordinates": {
+      "lat": 9.9647,
+      "lng": 76.2736
+    },
     "ambulanceAssigned": "KL-07-BN-5678",
     "patientName": "Anonymous",
     "reportedBy": "Family Member",
@@ -33,7 +39,10 @@
     "type": "Respiratory Distress",
     "severity": "Medium",
     "location": "Kakkanad, Kochi",
-    "coordinates": { "lat": 10.0104, "lng": 76.3462 },
+    "coordinates": {
+      "lat": 10.0104,
+      "lng": 76.3462
+    },
     "ambulanceAssigned": "KL-07-CD-9012",
     "patientName": "Anonymous",
     "reportedBy": "108 Helpline",
@@ -47,7 +56,10 @@
     "type": "Fall Injury",
     "severity": "Low",
     "location": "Palarivattom, Kochi",
-    "coordinates": { "lat": 9.9981, "lng": 76.3104 },
+    "coordinates": {
+      "lat": 9.9981,
+      "lng": 76.3104
+    },
     "ambulanceAssigned": "KL-07-EF-3456",
     "patientName": "Anonymous",
     "reportedBy": "Bystander",
@@ -61,12 +73,32 @@
     "type": "Fire Accident",
     "severity": "High",
     "location": "Edappally, Kochi",
-    "coordinates": { "lat": 10.0250, "lng": 76.3083 },
+    "coordinates": {
+      "lat": 10.025,
+      "lng": 76.3083
+    },
     "ambulanceAssigned": "KL-07-GH-7890",
     "patientName": "Multiple Victims",
     "reportedBy": "Fire Department",
     "status": "En Route",
     "eta": "6 min",
     "timestamp": "2025-10-16T14:30:00Z"
+  },
+  {
+    "id": 106,
+    "caseId": "EMG-2025-106",
+    "reportedBy": "API Test",
+    "patientName": "Test Patient",
+    "type": "Medical Emergency",
+    "severity": "Medium",
+    "location": "Test Location, Kochi",
+    "coordinates": {
+      "lat": 9.9312,
+      "lng": 76.2673
+    },
+    "timestamp": "2025-10-16T06:39:09.623Z",
+    "status": "Resolved",
+    "ambulanceAssigned": "KL-07-TEST-1234",
+    "updatedAt": "2025-10-16T06:39:29.319Z"
   }
 ]

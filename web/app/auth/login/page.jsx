@@ -26,15 +26,17 @@ export default function LoginPage() {
     setError('')
     setIsLoading(true)
 
-    // Simulate network delay
-    await new Promise(resolve => setTimeout(resolve, 800))
-
-    const result = login(email, password)
-    
-    if (result.success) {
-      router.push('/dashboard')
-    } else {
-      setError(result.error)
+    try {
+      const result = await login(email, password)
+      
+      if (result.success) {
+        router.push('/dashboard')
+      } else {
+        setError(result.error || 'Invalid credentials')
+        setIsLoading(false)
+      }
+    } catch (error) {
+      setError('An error occurred. Please try again.')
       setIsLoading(false)
     }
   }
