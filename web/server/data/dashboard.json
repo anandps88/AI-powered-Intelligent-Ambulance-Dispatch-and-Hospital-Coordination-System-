@@ -1,0 +1,10 @@
+{
+  "activeAmbulances": 14,
+  "pendingIncidents": 3,
+  "availableHospitals": 6,
+  "avgResponseTime": "7m 22s",
+  "totalEmergencies": 127,
+  "resolvedToday": 45,
+  "criticalCases": 2,
+  "systemStatus": "Operational"
+}

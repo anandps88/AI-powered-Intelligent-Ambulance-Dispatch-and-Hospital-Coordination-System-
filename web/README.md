@@ -104,9 +104,30 @@ Before you begin, ensure you have **Node.js** installed on your system:
    - Navigate to [http://localhost:3000](http://localhost:3000)
    - You should see the AI-Powered Ambulance Dispatch Dashboard
 
-## 📊 Dashboard Features
+## � Authentication System
+
+### **Demo Credentials:**
+```
+Username: anand
+Password: 123456
+```
+
+The application now includes a complete authentication system:
+- ✅ Modern login page with validation
+- ✅ Protected dashboard routes
+- ✅ Session persistence (localStorage)
+- ✅ Logout functionality
+- ✅ User profile display in sidebar
+- ✅ Smooth animations and transitions
+
+**First-time users:** You'll be redirected to `/auth/login` automatically.
+
+---
+
+## �📊 Dashboard Features
 
 ### 1. **Sidebar Navigation**
+- User Profile (Avatar + Name + Role)
 - Dashboard (Active)
 - Incidents
 - Ambulances
@@ -114,6 +135,7 @@ Before you begin, ensure you have **Node.js** installed on your system:
 - Analytics
 - Notifications
 - Settings
+- Logout Button (Red)
 - System status indicator at bottom
 
 ### 2. **Live Map View**

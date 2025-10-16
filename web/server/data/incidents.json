@@ -1,0 +1,72 @@
+[
+  {
+    "id": 101,
+    "caseId": "EMG-2025-101",
+    "type": "Road Accident",
+    "severity": "High",
+    "location": "MG Road, Kochi",
+    "coordinates": { "lat": 9.9312, "lng": 76.2673 },
+    "ambulanceAssigned": "KL-07-AZ-4123",
+    "patientName": "Anonymous",
+    "reportedBy": "Police Control Room",
+    "status": "En Route",
+    "eta": "4 min",
+    "timestamp": "2025-10-16T14:32:00Z"
+  },
+  {
+    "id": 102,
+    "caseId": "EMG-2025-102",
+    "type": "Cardiac Emergency",
+    "severity": "Critical",
+    "location": "Marine Drive, Ernakulam",
+    "coordinates": { "lat": 9.9647, "lng": 76.2736 },
+    "ambulanceAssigned": "KL-07-BN-5678",
+    "patientName": "Anonymous",
+    "reportedBy": "Family Member",
+    "status": "At Scene",
+    "eta": "On Site",
+    "timestamp": "2025-10-16T14:28:00Z"
+  },
+  {
+    "id": 103,
+    "caseId": "EMG-2025-103",
+    "type": "Respiratory Distress",
+    "severity": "Medium",
+    "location": "Kakkanad, Kochi",
+    "coordinates": { "lat": 10.0104, "lng": 76.3462 },
+    "ambulanceAssigned": "KL-07-CD-9012",
+    "patientName": "Anonymous",
+    "reportedBy": "108 Helpline",
+    "status": "Dispatched",
+    "eta": "8 min",
+    "timestamp": "2025-10-16T14:35:00Z"
+  },
+  {
+    "id": 104,
+    "caseId": "EMG-2025-104",
+    "type": "Fall Injury",
+    "severity": "Low",
+    "location": "Palarivattom, Kochi",
+    "coordinates": { "lat": 9.9981, "lng": 76.3104 },
+    "ambulanceAssigned": "KL-07-EF-3456",
+    "patientName": "Anonymous",
+    "reportedBy": "Bystander",
+    "status": "Arriving at Hospital",
+    "eta": "2 min",
+    "timestamp": "2025-10-16T14:25:00Z"
+  },
+  {
+    "id": 105,
+    "caseId": "EMG-2025-105",
+    "type": "Fire Accident",
+    "severity": "High",
+    "location": "Edappally, Kochi",
+    "coordinates": { "lat": 10.0250, "lng": 76.3083 },
+    "ambulanceAssigned": "KL-07-GH-7890",
+    "patientName": "Multiple Victims",
+    "reportedBy": "Fire Department",
+    "status": "En Route",
+    "eta": "6 min",
+    "timestamp": "2025-10-16T14:30:00Z"
+  }
+]
